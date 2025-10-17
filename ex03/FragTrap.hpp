@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pjarnac <pjarnac@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/16 11:04:38 by pjarnac           #+#    #+#             */
-/*   Updated: 2025/10/16 11:04:38 by pjarnac          ###   ########.fr       */
+/*   Created: 2025/10/16 17:30:33 by pjarnac           #+#    #+#             */
+/*   Updated: 2025/10/16 17:30:33 by pjarnac          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-# include <string>
 # include "ClapTrap.hpp"
 
-class ScavTrap: public ClapTrap
+class FragTrap: virtual public ClapTrap
 {
-public:
-	void	guardGate();
+protected:
+	const static int	base_health = 100;
+	const static int	base_energy = 100;
+	const static int	base_attack = 30;
 
-	ScavTrap();
-	explicit ScavTrap(const std::string &name);
-	ScavTrap(ScavTrap const &e);
-	ScavTrap	&operator=(ScavTrap const &e);
-	virtual ~ScavTrap();
+public:
+	void	highFivesGuys();
+
+	FragTrap();
+	explicit FragTrap(const std::string &name);
+	FragTrap(FragTrap const &e);
+	FragTrap	&operator=(FragTrap const &e);
+	virtual ~FragTrap();
 };
 
 #endif

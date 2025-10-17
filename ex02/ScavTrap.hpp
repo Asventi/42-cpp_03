@@ -25,7 +25,7 @@ public:
 	explicit ScavTrap(const std::string &name);
 	ScavTrap(ScavTrap const &e);
 	ScavTrap	&operator=(ScavTrap const &e);
-	~ScavTrap();
+	virtual ~ScavTrap();
 };
 
 #endif

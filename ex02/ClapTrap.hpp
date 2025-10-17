@@ -41,7 +41,7 @@ public:
 	explicit ClapTrap(const std::string &name);
 	ClapTrap(const ClapTrap &e);
 	ClapTrap	&operator=(const ClapTrap &e);
-	~ClapTrap();
+	virtual ~ClapTrap();
 };
 
 #endif

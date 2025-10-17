@@ -16,8 +16,13 @@
 # include <string>
 # include "ClapTrap.hpp"
 
-class ScavTrap: public ClapTrap
+class ScavTrap: virtual public ClapTrap
 {
+protected:
+	const static int	base_health = 100;
+	const static int	base_energy = 50;
+	const static int	base_attack = 20;
+
 public:
 	void	guardGate();
 
