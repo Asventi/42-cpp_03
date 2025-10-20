@@ -19,7 +19,8 @@
 class ScavTrap: public ClapTrap
 {
 public:
-	void	guardGate();
+	void	guardGate() const;
+	void	attack(const std::string &target);
 
 	ScavTrap();
 	explicit ScavTrap(const std::string &name);

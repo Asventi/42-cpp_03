@@ -14,9 +14,21 @@
 
 #include <iostream>
 
-void ScavTrap::guardGate()
+void ScavTrap::guardGate() const
 {
 	std::cout << "ScavTrap " << _name << " is now in Gate Keeping mode.\n";
+}
+
+void	ScavTrap::attack(const std::string &target)
+{
+	if (_energy <= 0 || _health <= 0)
+	{
+		std::cout << "ScavTrap " << _name << " have not enough healt or energy.\n";
+		return ;
+	}
+	--_energy;
+	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing "
+		<< _attack << " damage! Remaining energy: " << _energy << ".\n";
 }
 
 ScavTrap::ScavTrap()

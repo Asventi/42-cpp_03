@@ -17,7 +17,6 @@
 #include "doctest.h"
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
-#include "../../../.local/include/doctest.h"
 
 TEST_CASE("ClapTrap attack")
 {

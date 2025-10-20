@@ -25,6 +25,7 @@ protected:
 
 public:
 	void	guardGate();
+	void	attack(const std::string &target);
 
 	ScavTrap();
 	explicit ScavTrap(const std::string &name);
